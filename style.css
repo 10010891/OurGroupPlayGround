@@ -1,0 +1,13 @@
+@font-face{
+    src: url("/assets/fonts/Inter-UI-Regular.otf");
+    font-family: "interUI";
+}
+@font-face{
+    src: url("/assets/fonts/googleSansText.woff2");
+    font-family: "google";
+}
+
+*{
+    font-family: google ;
+  
+}
