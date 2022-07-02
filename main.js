@@ -1,6 +1,5 @@
-var increaseButton = document.getElementById('increaseAmount')
-var decreaseButton = document.getElementById('decreaseAmount')
-function increaseAmount(){
-   alert('heello')
+function toggleSideMenu(){
+    var sideNav = document.getElementById("nav")
+    var state = sideNav.style
+    console.log(state)
 }
-
