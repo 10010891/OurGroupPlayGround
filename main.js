@@ -5,4 +5,5 @@ function toggleSideMenu(){
     }else{
         sideNav.style.display = "none"
     }
+    alert('Side menu on')
 }
