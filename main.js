@@ -41,7 +41,7 @@ var getImage = document.getElementById('myImage')
 console.log(getImage)
 
 function showImage(src){
-    var source = '/image/'+src 
+    var source = '/images/'+src 
     getImage.src = source
     console.log(source)
     console.log(getImage)
