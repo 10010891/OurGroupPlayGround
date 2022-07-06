@@ -36,3 +36,13 @@ function decreaseAmount() {
 function addToCart(){
     alert("This Page is readOnly.It's not connected with server yet.")
 }
+
+var getImage = document.getElementById('myImage')
+console.log(getImage)
+
+function showImage(src){
+    var source = '/image/'+src 
+    getImage.src = source
+    console.log(source)
+    console.log(getImage)
+}
