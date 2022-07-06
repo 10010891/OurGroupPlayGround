@@ -40,8 +40,8 @@ function addToCart(){
 var getImage = document.getElementById('myImage')
 console.log(getImage)
 
-function showImage(src){ 
-    var source = '/images/'+src 
+function showImage(sorc){ 
+    var source = 'https://ibrahim0891.github.io/simple-e-commerce-site-design/images/'+sorc +src 
     getImage.src = source
     console.log(source)
     console.log(getImage)
