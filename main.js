@@ -41,7 +41,7 @@ var getImage = document.getElementById('myImage')
 console.log(getImage)
 
 function showImage(sorc){ 
-    var source = 'https://ibrahim0891.github.io/simple-e-commerce-site-design/images/'+sorc +src 
+    var source = 'https://ibrahim0891.github.io/simple-e-commerce-site-design/images/'+sorc 
     getImage.src = source
     console.log(source)
     console.log(getImage)
