@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -14,32 +14,60 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-</head> 
-<body class="md:w-4/5 md:m-auto">
-<header class="shadow-lg md:shadow-none p-3 md:pb-0 w-full flex justify-between items-center">
-    <i class="md:hidden la la-bars text-2xl" onclick="toggleSideMenu()"></i>
+</head>
+<body class="">
+
+<header class="shadow-lg md:shadow-none p-3 md:pb-0 w-full flex justify-between items-center bg-white" style="position:sticky; top:0; z-index: 9999;">
+    <i class="md:hidden la la-bars text-2xl" onclick="toggleElement('nav','block')"></i>
     <h1 class="font-bold text-xl md:p-5 text-3xl"> Sneackers </h1>
-    <nav id="nav" class="hidden bg-white p-5 w-2/3 h-full shadow-lg md:shadow-none md:block fixed top-0 left-0 md:static">
+    <nav id="nav" class="hidden bg-white p-5 w-2/3 h-full shadow-lg md:shadow-none md:block fixed top-0 left-0 md:static" style="z-index:100000;">
         <button class='w-full flex justify-between md:hidden'>
             <i class='lab la-facebook p-4 hover:bg-gray-200 hover:text-red-500'></i>
             <i class='la la-close p-4 hover:bg-gray-200 hover:text-red-500' onclick='closeSideMenu()'></i>
         </button> 
-        <a href="#" class="block md:inline w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Home </a>
-        <a href="#" class="block md:inline w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Product</a>
-        <a href="#" class="block md:inline w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2 md:hidden xl:inline"> Advertisment </a>
-        <a href="#" class="block md:inline w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Catagory </a>
-        <a href="#" class="block md:inline w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Contact </a>
-        <a href="#" class="block md:inline w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> About</a>
+        <div class="md:flex md:flex-row md:w-full bg-white overflow-auto">
+            <a href="#" class="block md:shrink-0 w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Home </a>
+            <a href="#" class="block md:shrink-0 w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Product</a>
+            <a href="#" class="block md:shrink-0 w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2 md:hidden xl:inline"> Advertisment </a>
+            <a href="#" class="block md:shrink-0 w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Catagory </a>
+            <a href="#" class="block md:shrink-0 w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> Contact </a>
+            <a href="#" class="block md:shrink-0 w-full md:w-auto hover:bg-gray-100 px-4 py-2 md:rounded-full mr-1 md:x-4 py-2 hover:border-orange-500 hover:border-2"> About</a>
+        </div>
     </nav>
     <div class=" flex items-center">
-        <i class="la la-shopping-cart text-2xl mr-2"></i>
+        <i class="la la-shopping-cart text-2xl mr-2" onclick="toggleElement('busket','flex')"> </i>
         <img src="images/profilePicture.jpeg"  id="displayBoard" class="w-[24px] rounded-full "> 
     </div>
 </header>
-<div class="md:flex">
+<div class="md:flex items-center "> <!--  main body -->
     <div class="md:w-1/2 md:p-5">
-        <img class="md:rounded-lg" id="myImage" src="images/image-product-2.jpg">
-        <div class="flex w-full p-2 rounded-sm overflow-auto">
+        <div class="relative"> <!--  cart component  -->
+            <img class="md:rounded-lg " id="myImage" src="images/image-product-2.jpg">
+            <div class="absolute md:fixed top-0 md:top-[60px] w-full md:justify-end hidden" id="busket">
+                 <div class="rounded-2xl bg-white m-4 shadow-xl md:w-[420px] ">
+                     <div class="">
+                        <h1 class="p-6 font-semibold text-xl border-b-2 border-slate-200"> Cart </h1>
+                        <div class="p-6 flex justify-between items-center ">
+                            <img src="/images/image-product-1-thumbnail.jpg" class="rounded-md w-[64px]">
+                            <div class="w-full pl-3 text-gray-500">
+                                <h2> Autumn Special sneakers</h2>
+                                <p class=""> <span class="text-gray-700">$125 <i class="la la-close"></i> <span id="selectedAmount"> 0 </span> <b id="totalCost">0</b>
+                                </p>
+                            </div>
+                            <button class="transition-all bg-gray-100  hover:bg-red-500 hover:text-white p-3 rounded-xl">
+                                <i class="la la-remove"></i>
+                            </button>
+                        </div>
+                        <div class='p-6'>
+                            <button class="w-full p-5 rounded-lg text-white bg-orange-500 hover:bg-orange-300">
+                                checkout
+                            </button>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="flex w-full bg-gray-200 p-2 rounded-sm overflow-auto">
             <img class="aspect-square rounded-md shrink-0 w-1/4 m-2 hover:ring-4 hover:ring-amber-500 hover:ring-offset-2 " onclick="showImage('image-product-1.jpg')" src="images/image-product-1-thumbnail.jpg">
             <img class="aspect-square rounded-md shrink-0 w-1/4 m-2 hover:ring-4 hover:ring-amber-500 hover:ring-offset-2 " onclick="showImage('image-product-2.jpg')" src="images/image-product-2-thumbnail.jpg">
             <img class="aspect-square rounded-md shrink-0 w-1/4 m-2 hover:ring-4 hover:ring-amber-500 hover:ring-offset-2 " onclick="showImage('image-product-3.jpg')" src="images/image-product-3-thumbnail.jpg">
@@ -66,10 +94,10 @@
                 </span>
             </div>
             <span class="text-lg text-gray-400">
-               <s>$125 </s>
+               <s>$250 </s>
             </span>
         </section>
-        <section class="p-5 w-full md:flex "> 
+        <section class="p-5 w-full md:flex ">
             <div class="md:w-1/2 md:mr-3 text-orange-500 rounded-md flex justify-between items-center">
                 <button class="p-4 bg-gray-100" id='decreament' onclick="decreaseAmount()">
                     <span class="la la-minus"></span>
@@ -101,13 +129,22 @@
 
 <script src="main.js"></script>
 
-<div class="bg-orange-300 p-5 w-full mt-10 text-center">
-<b> To do list: </b> <br>
-1) Add a fuction to toggle the mobile side menu <br>
-2) Add a fuction to increse and decrease the value of amount numberBox
+<div class="opacity-20 hover:opacity-100">
+    <div class="bg-orange-500 p-5 w-full mt-10 text-center">
+    <b> To do list: </b> <br>
+    1) Add more contents <br>
+    2) Add a Image slider for mobile and lightbox for desktop with increament and decreasement algorithm.
+       Would be steps:
+       <ol type="abc">
+           <li> Make a Image frame</li>
+           <li> Add next and privious button</li>
+           <li> Change the src attr of image with js as the next and provious button is clicked  </li>
+       </ol>
+    </div>
+    
+    <h1 class="p-8 pb-4 border-t-2 bg-gray-200 text-center text-lg"> <i class="la la-check-circle"></i> Initial design complte </h1>
+    <h1 class="p-8 pt-0 border-t-2 bg-gray-200 text-center text-lg"> <i class="la la-list"></i> Next step: Add interective front end fuctionality </h1>
 </div>
 
-<h1 class="p-8 pb-4 border-t-2 bg-gray-200 text-center text-lg"> <i class="la la-check-circle"></i> Initial design complte </h1>
-<h1 class="p-8 pt-0 border-t-2 bg-gray-200 text-center text-lg"> <i class="la la-list"></i> Next step: Add interective front end fuctionality </h1>
 </body>
 </html>
