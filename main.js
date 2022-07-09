@@ -1,7 +1,7 @@
-function toggleSideMenu() {
-    var sideNav = document.getElementById("nav")
+function toggleElement(elementSelector,method) {
+    var sideNav = document.getElementById(elementSelector)
     if (sideNav.style.display == "none") {
-        sideNav.style.display = "block"
+        sideNav.style.display = method
     } else {
         sideNav.style.display = "none"
     }
@@ -33,8 +33,14 @@ function decreaseAmount() {
         alert("You cannot select less than 0 amount of Product...")
     }
 }
+
 function addToCart(){
-    alert("This Page is readOnly.It's not connected with server yet.")
+    alert("Check your cart to see your total bill ")
+    var count = amountBox.value
+    var showOnCart = document.getElementById('selectedAmount')
+    var cost = document.getElementById('totalCost')
+    showOnCart.innerText = count
+    cost.innerText = '$'+ (count*125)
 }
 
 var getImage = document.getElementById('myImage')
