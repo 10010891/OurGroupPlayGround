@@ -53,4 +53,4 @@ function showImage(sorc){
     console.log(getImage)
 }
 
-var useless = "hello world"
+var useless = "hello world" 
