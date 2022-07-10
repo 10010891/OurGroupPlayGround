@@ -53,4 +53,4 @@ function showImage(sorc){
     console.log(getImage)
 }
 
-var check = "I will be shown in github"
+var useless = "hello world"
