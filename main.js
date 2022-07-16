@@ -53,4 +53,31 @@ function showImage(sorc){
     console.log(getImage)
 }
 
-var useless = "hello world" 
+
+var mainImage = document.getElementById('myImage')
+
+var findNumber = mainImage.src.search(1)
+var detectNumber = mainImage.src[findNumber]
+
+console.log(mainImage)
+
+function prevy() {
+    detectNumber = Number(detectNumber)
+    detectNumber -= 1
+    console.log(detectNumber)
+    if (detectNumber < 1) {
+        detectNumber = 4
+    }
+    mainImage.src = 'images/image-product-' + detectNumber + '.jpg'
+}
+
+function nexty() {
+    detectNumber = Number(detectNumber)
+    detectNumber += 1
+    console.log(detectNumber)
+    if (detectNumber > 4) {
+        detectNumber = 1
+    }
+    mainImage.src = "images/image-product-" + detectNumber + '.jpg'
+    console.log(detectNumber)
+}

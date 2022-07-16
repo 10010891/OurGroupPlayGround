@@ -42,7 +42,12 @@
 <div class="md:flex items-center "> <!--  main body -->
     <div class="md:w-1/2 md:p-5">
         <div class="relative"> <!--  cart component  -->
-            <img class="md:rounded-lg " id="myImage" src="images/image-product-2.jpg">
+            <div class="relative">
+                <button class="bg-white p-4 aspect-square rounded-full absolute top-1/2 left-0"  onclick="prev()"> <i class="la la-chevron-left"></i></button>
+                <button class="bg-white p-4 aspect-square rounded-full absolute top-1/2 right-0" onclick="next()"> <i class="la la-chevron-right"></i></button>
+                <img class="md:rounded-lg " id="myImage" src="images/image-product-2.jpg">    
+            </div>
+            
             <div class="absolute md:fixed top-0 md:top-[60px] w-full md:justify-end hidden" id="busket">
                  <div class="rounded-2xl bg-white m-4 shadow-xl md:w-[420px] ">
                      <div class="">
