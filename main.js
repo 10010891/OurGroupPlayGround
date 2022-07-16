@@ -54,14 +54,14 @@ function showImage(sorc){
 }
 
 
-var mainImage = document.getElementById('myImage')
+var mainImage = document.getElementById('mySliderImage')
 
 var findNumber = mainImage.src.search(1)
 var detectNumber = mainImage.src[findNumber]
 
 console.log(mainImage)
 
-function prevy() {
+function prev() {
     detectNumber = Number(detectNumber)
     detectNumber -= 1
     console.log(detectNumber)
@@ -71,7 +71,7 @@ function prevy() {
     mainImage.src = 'images/image-product-' + detectNumber + '.jpg'
 }
 
-function nexty() {
+function next() {
     detectNumber = Number(detectNumber)
     detectNumber += 1
     console.log(detectNumber)
