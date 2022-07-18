@@ -44,7 +44,7 @@ function addToCart(){
 }
 
 var getImage = document.getElementById('myImage')
-console.log(getImage)
+
 
 function showImage(sorc){ 
     var source = 'https://ibrahim0891.github.io/simple-e-commerce-site-design/images/'+sorc 
@@ -54,12 +54,12 @@ function showImage(sorc){
 }
 
 
-var mainImage = document.getElementById('mySliderImage')
+var fatchImage = document.getElementById('myImage')
+var srcString = fatchImage.src
+var findNumber = srcString.search(2)
+var detectNumber = fatchImage.src[findNumber]
 
-var findNumber = mainImage.src.search(1)
-var detectNumber = mainImage.src[findNumber]
-
-console.log(mainImage)
+console.log(detectNumber)
 
 function prev() {
     detectNumber = Number(detectNumber)
@@ -68,16 +68,16 @@ function prev() {
     if (detectNumber < 1) {
         detectNumber = 4
     }
-    mainImage.src = 'images/image-product-' + detectNumber + '.jpg'
+    fatchImage.src = 'images/image-product-' + detectNumber + '.jpg'
 }
 
 function next() {
     detectNumber = Number(detectNumber)
     detectNumber += 1
-    console.log(detectNumber)
+    
     if (detectNumber > 4) {
         detectNumber = 1
     }
-    mainImage.src = "images/image-product-" + detectNumber + '.jpg'
+    fatchImage.src = "images/image-product-" + detectNumber + '.jpg'
     console.log(detectNumber)
 }
