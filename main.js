@@ -81,3 +81,6 @@ function next() {
     fatchImage.src = "images/image-product-" + detectNumber + '.jpg'
     console.log(detectNumber)
 }
+
+
+console.log('this is a new commit')
